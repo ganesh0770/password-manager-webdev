@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "tailwindcss";
+
+
+@layer components {
+    .mycontainer {
+        @apply container max-w-full justify-items-center;
+
+    }
+
+    .inputs {
+        @apply rounded-full bg-white mt-2 inline text-black 
+    }
+
+    .hovering {
+        @apply hover:font-bold  hover:bg-amber-50 hover:text-black rounded-full px-2 mt-0.5
+    }
+    .logo{
+        @apply font-bold text-lg text-green-200
+    }
+    .insidelist{
+        @apply flex gap-2 text-sm text-white 
+    }
+    .insidenav{
+        @apply flex justify-between items-center px-30 h-18 
+    }
+    h1{
+        @apply text-white text-center p-12 pb-1 text-4xl
+    }
+    .center_name{
+
+        @apply text-green-400
+
+    }
+    .foo{
+        @apply text-sm font-semibold text-white uppercase
+    }
+    /* .b{
+        @apply border border-white 
+    } */
+
+    .oblique {
+        font-style: oblique;
+      }
+      
+    
+}
