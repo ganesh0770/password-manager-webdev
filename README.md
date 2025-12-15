@@ -28,8 +28,8 @@ A secure **Password Manager web application** built with **Next.js**, enabling u
 
 ### Installation
 
-1. Clone the repository: git clone https://github.com/your-username/password-manager.git
-2.cd password-manager
+1. Clone the repository: git clone https://github.com/ganesh0770/password-manager-webdev.git
+2.cd password-manager-webdev
 3.npm install
 4.npm run dev
 ```bash
