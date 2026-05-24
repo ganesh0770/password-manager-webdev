@@ -52,10 +52,10 @@ export default function Page() {
   const toggle_password = () => {
     if (pass_ref.current.type === "password") {
       pass_ref.current.type = "text";
-    } 
+    }
     else {
       pass_ref.current.type = "password";
-      
+
     }
   };
 
@@ -81,7 +81,7 @@ export default function Page() {
 
     // console.log(updated)
     toast.success("Update now!");
-    
+
 
 
 
@@ -89,7 +89,7 @@ export default function Page() {
 
   return (
     <>
-     
+
 
       <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
@@ -131,12 +131,20 @@ export default function Page() {
                 onChange={handlechange}
               />
 
-              <svg                             onClick={toggle_password} className="absolute invert right-2 top-3.5  cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="23" height="30" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.13 13.13 0 0 1 1.66-2.043C4.12 4.669 5.88 3.5 8 3.5c2.12 0 3.879 1.17 5.227 2.468a13.13 13.13 0 0 1 1.66 2.043c.907 1.378 1.047 2.065 1.047 2.065s-.139.686-.1.686a13.13 13.13 0 0 1-1.66-2.043C11.879 11.5 10.12 12.5 8 12.5c-2.12 0-3.879-1.17-5.227-2.468a13.13 13.13 0 0 1-1.66-2.043c-.101-.151-.139-.185-.153-.21H1.173zM8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/>
-</svg>
+              <svg
+                onClick={toggle_password}
+                className="absolute right-2 top-3.5 invert cursor-pointer bi bi-eye"
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="30"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.13 13.13 0 0 1 1.66-2.043C4.12 4.669 5.88 3.5 8 3.5c2.12 0 3.879 1.17 5.227 2.468a13.13 13.13 0 0 1 1.66 2.043c.907 1.378 1.047 2.065 1.047 2.065s-.139.686-.1.686a13.13 13.13 0 0 1-1.66-2.043C11.879 11.5 10.12 12.5 8 12.5c-2.12 0-3.879-1.17-5.227-2.468a13.13 13.13 0 0 1-1.66-2.043c-.101-.151-.139-.185-.153-.21H1.173zM8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
+              </svg>
 
 
-           
+
             </div>
 
             <button
@@ -209,8 +217,33 @@ export default function Page() {
                         </svg>
 
 
-                        <svg onClick={() => edit_option(i, item)}
-                          className="cursor-pointer " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        {/* <svg onClick={() => edit_option(i, item)}
+                          className="cursor-pointer "
+                           xmlns="http://www.w3.org/2000/svg"
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor"
+                             stroke-width="2"
+                              stroke-linecap="round"
+                               stroke-linejoin="round">
+                          <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                        </svg> */}
+
+                        <svg
+                          onClick={() => edit_option(i, item)}
+                          className="cursor-pointer"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
                           <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                         </svg>
 
@@ -229,10 +262,10 @@ export default function Page() {
         </div>
       </div>
       <div className='bg-gray-300 mycontainer h-18 text-black fixed bottom-0 text-2xl text-center p-1 oblique flex  justify-center '>
-        
+
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="70t" viewBox="0 0 50 50">
-<path d="M23.375 5.052c-2.46.259-4.823 1.956-6.751 3.356-.747.542-1.452 1.055-2.109 1.449C11.808 11.481 7.675 11.5 7.5 11.5c-.551 0-1 .448-1 1v8.875c0 .011.018.767.247 2h16.628V5.052zM23.191 42.544c.059.027.122.04.184.061v-17.23H7.223c.317 1.095.772 2.354 1.428 3.702C10.569 33.024 14.65 38.563 23.191 42.544zM39.35 29.077c.655-1.348 1.111-2.607 1.428-3.702H25.375v16.89C33.523 38.307 37.474 32.934 39.35 29.077zM41.5 12.5c0-.552-.449-1-1-1-.175 0-4.308-.019-7.015-1.643-.657-.395-1.363-.907-2.109-1.449-1.731-1.257-3.813-2.752-6.001-3.235v18.202h15.878c.229-1.236.247-1.995.247-2.011V12.5z"></path>
-</svg>
+          <path d="M23.375 5.052c-2.46.259-4.823 1.956-6.751 3.356-.747.542-1.452 1.055-2.109 1.449C11.808 11.481 7.675 11.5 7.5 11.5c-.551 0-1 .448-1 1v8.875c0 .011.018.767.247 2h16.628V5.052zM23.191 42.544c.059.027.122.04.184.061v-17.23H7.223c.317 1.095.772 2.354 1.428 3.702C10.569 33.024 14.65 38.563 23.191 42.544zM39.35 29.077c.655-1.348 1.111-2.607 1.428-3.702H25.375v16.89C33.523 38.307 37.474 32.934 39.35 29.077zM41.5 12.5c0-.552-.449-1-1-1-.175 0-4.308-.019-7.015-1.643-.657-.395-1.363-.907-2.109-1.449-1.731-1.257-3.813-2.752-6.001-3.235v18.202h15.878c.229-1.236.247-1.995.247-2.011V12.5z"></path>
+        </svg>
         <span className='flex flex-col  ' >
 
           <h3>
