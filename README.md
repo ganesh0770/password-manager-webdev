@@ -55,6 +55,8 @@ Bash
 
 npm install
 
+***if any audit error : npm audit fix --force
+
 4️⃣ Run the development server:
 Bash
 
